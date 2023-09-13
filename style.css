@@ -18,13 +18,13 @@ variables are available to be used anywhere in our html document
 
 /* Defines the main container size, we are limiting to 1140px max and centring in the viewport */
 .main-container {
-    max-width: 72em;
+    max-width: 74rem;
     margin: 0 auto;
     font-family: "Georama";
     color: var(--color-1);
 }
 
-.img {
+img {
     width: 100%;
 }
 
@@ -47,75 +47,99 @@ variables are available to be used anywhere in our html document
     color: #FFFFFF;
 }
 
-.storyCard1 {
-    display: flex;
+
+.story-card {
+    display: flex;
     flex-direction: column;
     overflow: hidden;
-    background-color: var(var--color-2)
+    object-fit: fill;
 }
 
-.storyCard2 {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+.story-card-banner {
+    font-size: 1em;
+    padding: 0.75rem 0.5rem 0.75rem 0.5rem;
+}
+
+#storyCard1 {
+    background-color: var(--color-2)
+} 
+
+#storyCardBanner1 {
+    background-color: var(--color-2);
+}
+
+
+#storyCard2 {
     background-color: var(--color-3)
 
 }
 
-.storyCard3 {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+#storyCardBanner2 {
+    background-color: var(--color-3);
+}
+
+#storyCard3 {
+    background-color: var(--color-4) ;
+}
+
+#storyCardBanner3 {
+    background-color: var(--color-4) ;
+}
+
+#storyCard4 {
+    background-color: var(--color-5) ;
+} 
+
+#storyCardBanner4 {
+    background-color: var(--color-5);
+}
+
+#storyCard5 {
+    background-color: var(--color-2) ;
+}
+
+#storyCardBanner5 {
+    background-color: var(--color-2) ;
+}
+
+#storyCard6 {
+    background-color: var(--color-3) ;
+}
+
+
+#storyCardBanner6 {
+    background-color: var(--color-3);
+}
+
+
+#storyCard7 {
     background-color:var(--color-4) ;
 }
 
-.storyCard4 {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    background-color: var(--color-5);
+#storyCardBanner7 {
+    background-color: var(--color-4);
 }
 
-.storyCard5 {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    background-color: var(--color-2);
+#storyCard8 {
+    background-color: var(--color-5) ;
 }
 
-.storyCard6 {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    background-color:var(--color-3);
+#storyCardBanner8 {
+    background-color: var(--color-5) ;
+    
 }
 
-.storyCard7 {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    background-color:var(--color-4);
-}
-
-.storyCard8 {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    background-color: var(--color-5);
-}
 /* now we create names for the grid areas for specific elements */
 #banner {
     grid-area: bn1;
 }
 
 #storyCard1 {
-    grid-area: sc1;
-    
+    grid-area: sc1;   
 }
 
 #storyCard2 {
     grid-area: sc2;
-
 }
 
 #storyCard3 {
@@ -138,13 +162,11 @@ variables are available to be used anywhere in our html document
     grid-area: sc7;
 }
 
-
 /* insert grid-areas for story cards 6 and 7 here */
 
 #storyCard8 {
     grid-area: sc8;
 }
-
 
 /* Use a flexible layout grid */
 .main-container {
@@ -159,28 +181,27 @@ Because this CSS definition comes first, it will apply by default. Then we overr
 media queries for progressively bigger screen widths
 */
 .main-container {
-    .main-container {
-        /* add grid template for phone layout here */
-        grid-template: 
-        "bn1 bn1 bn1 bn1" minmax(8em, auto)
-        " .   .   .   . " minmax(4em,auto)
-        "sc1 sc1 sc1 sc1" minmax(14em, auto)
-        " .   .   .   . " minmax(4em,auto)
-        "sc2 sc2 sc2 sc2" minmax(24em,auto)
-        " .   .   .   ." minmax(4em, auto)
-        "sc3 sc3 sc3 sc3" minmax(30em,auto)
-        " .   .   .   . " minmax(4em, auto)
-        "sc4 sc4 sc4 sc4" minmax(22em, auto)
-        " .   .   .   . " minmax(4em, auto)
-        "sc5 sc5 sc5 sc5" minmax(22em, auto)
-        " .   .   .   . " minmax(4em, auto)
-        "sc6 sc6 sc6 sc6" minmax(24em, auto)
-        " .   .   .   . " minmax(4em, auto)
-        "sc7 sc7 sc7 sc7"minmax(22em,auto)
-        " .   .   .   . "minmax(4em, auto)
-        "sc8 sc8 sc8 sc8"minmax(20em,auto)
-    }
+    /* add grid template for phone layout here */
+    grid-template: 
+    "bn1 bn1 bn1 bn1" minmax(8em, auto)
+    " .   .   .   . " minmax(4em,auto)
+    "sc1 sc1 sc1 sc1" minmax(14em, auto)
+    " .   .   .   . " minmax(4em,auto)
+    "sc2 sc2 sc2 sc2" minmax(24em,auto)
+    " .   .   .   . " minmax(4em, auto)
+    "sc3 sc3 sc3 sc3" minmax(32em,auto)
+    " .   .   .   . " minmax(4em, auto)
+    "sc4 sc4 sc4 sc4" minmax(22em, auto)
+    " .   .   .   . " minmax(4em, auto)
+    "sc5 sc5 sc5 sc5" minmax(20em, auto)
+    " .   .   .   . " minmax(4em, auto)
+    "sc6 sc6 sc6 sc6" minmax(24em, auto)
+    " .   .   .   . " minmax(4em, auto)
+    "sc7 sc7 sc7 sc7" minmax(22em,auto)
+    " .   .   .   . " minmax(4em, auto)
+    "sc8 sc8 sc8 sc8" minmax(20em,auto)
 }
+
     
 @media (min-width: 50em) {
     .main-container {
@@ -188,7 +209,7 @@ media queries for progressively bigger screen widths
         grid-template: 
         "bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1" minmax(8em, auto)
         " .   .   .   .   .   .   .   . " minmax(2em, auto)
-        " .  sc1  sc1 sc1 sc1 sc1 sc1 . " minmax(20em, auto)
+        " .  sc1 sc1 sc1 sc1 sc1 sc1  . " minmax(24em, auto)
         " .   .   .   .   .   .   .   . " minmax(4em, auto)
         " sc2 sc2 sc2 sc2 .   .  .    . " minmax(24em, auto)
         " .   .   .   .   .   .  .    . " minmax(4em, auto)
@@ -198,33 +219,42 @@ media queries for progressively bigger screen widths
         " .   .   .   .   .   .   .   . " minmax(4em, auto)
         " .   .   .   .  sc5 sc5 sc5 sc5" minmax(22em, auto)
         " .   .   .   .   .   .   .   . " minmax(4em, auto)
-        " sc6 sc6 sc6 sc6 .   .   .   . " minmax( 24em, auto)
+        " sc6 sc6 sc6 sc6 .   .   .   . " minmax(24em, auto)
         " .   .   .   .   .   .   .   . " minmax(4em, auto)
-        " .   .   .   .  sc7 sc7 sc7 sc7" minmax(22em, auto)
+        " .   .   .   .  sc7 sc7 sc7 sc7" minmax(26em, auto)
         " .   .   .   .   .   .   .   . " minmax(4em, auto)
         " .  sc8 sc8 sc8 sc8 sc8 sc8  . " minmax(22em, auto)
+    }
+
+    .story-card-banner {
+        font-size: 1.5em;
     }
 }
 
 @media (min-width: 75em) {
-    .main-container {
+.main-container {
+
         grid-template:
         "bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1 bn1" minmax(8em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-        " .   .  sc1 sc1 sc1 sc1 sc1 sc1 sc1 sc1  .   . " minmax(32em, auto)
+        " .   .  sc1 sc1 sc1 sc1 sc1 sc1 sc1 sc1  .   . " minmax(30em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
         " .  sc2 sc2 sc2 sc2  .   .   .   .   .   .   . " minmax(30em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-        " .   .   .   .   .   .   .   .  sc3 sc3 sc3 sc3" minmax(32em, auto)
+        " .   .   .   .   .   .   .   sc3 sc3 sc3 sc3 . " minmax(32em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
         " .  sc4 sc4 sc4 sc4  .   .   .   .   .   .   . " minmax(28em, auto)
         " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
-        " .   .   .   .   .   .   .   .  sc5 sc5 sc5 sc5" minmax(26em, auto)
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
-        " .   sc6 sc6 sc6 sc6 .   .   .   .   .   .   . " minmax(32em, auto)
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
-        " .   .   .   .   .   .   .   .  sc7 sc7 sc7 sc7" minmax(28em, auto)
-        " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
-        " .   .  sc8 sc8 sc8 sc8 sc8 sc8 sc8 sc8  .   . " minmax(28em, auto)
+        " .   .   .   .   .   .   .   sc5 sc5 sc5 sc5 . " minmax(26em, auto)
+        " .   .   .   .   .   .   .   .    .   .   .  . " minmax(4em,auto)
+       "  . sc6 sc6 sc6 sc6   .   .   .    .   .   .  . " minmax(24em,auto)
+       "  .   .   .   .   .   .   .   .    .   .   .  . " minmax(4em,auto)
+       "  .   .   .   .   .   .   .   sc7 sc7 sc7 sc7 . " minmax(28em, auto)
+       "  .   .   .   .   .   .   .   .    .   .   .  . " minmax(4em, auto)
+       "  .   .  sc8 sc8 sc8 sc8 sc8 sc8 sc8 sc8   .  . " minmax(28em, auto)
     }
-}
+    
+    .story-card-banner {
+        font-size: 1.5em;
+    }
+} 
